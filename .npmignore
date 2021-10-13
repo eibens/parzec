@@ -1,6 +1,0 @@
-.vscode/
-src
-tsconfig.json
-lib/test
-testdata/
-.travis.yml
