@@ -8,7 +8,7 @@ out of the box.
 > [Parzec] is a parser combinator library adapted from Haskell's famous
 > [Parsec][Parsec] library. A parser combinator library consist of
 > [higher order functions][higher order functions] which make it easy to build
-> [recursive descent parsers][recursive descent parsers]. 
+> [recursive descent parsers][recursive descent parsers].
 >
 > <cite>-- [johtela/parzec][parzec]</cite>
 
