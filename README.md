@@ -1,6 +1,16 @@
 # parzec_deno
 
-[parzec_deno] is a Deno port of the [Parzec][parzec] NPM package.
+[parzec_deno] is a Deno port of the [Parzec][parzec] NPM package. This module
+was created because currently the module at
+[deno.land/x/parzec](https://deno.land/x/parzec)) does not seem to support Deno
+out of the box.
+
+> [Parzec] is a parser combinator library adapted from Haskell's famous
+> [Parsec][Parsec] library. A parser combinator library consist of
+> [higher order functions][higher order functions] which make it easy to build
+> [recursive descent parsers][recursive descent parsers]. 
+>
+> <cite>-- [johtela/parzec][parzec]</cite>
 
 [![License][license-shield]](LICENSE)
 [![Deno module][deno-land-shield]][deno-land]
@@ -9,35 +19,11 @@ tag][github-shield]][github] [![Build][build-shield]][build]
 [![Code
 coverage][coverage-shield]][coverage]
 
-> ## Parser Combinators for Typescript
->
-> [Parzec] is a parser combinator library adapted from Haskell's famous
-> [Parsec][Parsec] library. A parser combinator library consist of
-> [higher order functions][higher order functions] which make it easy to build
-> [recursive descent parsers][recursive descent parsers]. Parsers composed from
-> Parzec's combinators can recognize languages in the [PEG][PEG] class of
-> grammars. PEG grammars can be context-sensitive, so the parsers have infinite
-> lookahead and backtracking capabilities.
->
-> Parzec also supports efficient parsing of [LL(1)][LL(1)] grammars by enabling
-> the backtracking only when a special combinator is used. Also, to improve
-> performance, some combinators have been inlined rather than built from lower
-> level combinators.
->
-> Parzec's input is represented by an abstract [interface][interface].
-> Consequently, the parsers' input can be anything from simple strings to files,
-> or even tokenized data streams. Parzec includes functionality to create
-> [lexical analyzers][lexical analyzers] or _lexers_ from
-> [regular expressions][regular expressions]. The lexer converts input strings
-> into tokens, and makes the parsing simpler and more efficient.
->
-> <cite>-- [johtela/parzec][parzec]</cite>
+# Usage
 
-# Motivation
-
-The original [Parzec] library (at
-[deno.land/x/parzec](https://deno.land/x/parzec)) does not seem to currently
-support Deno.
+```ts
+import * as pz from "https://deno.land/x/parzec_deno/mod.ts";
+```
 
 # Changes
 
@@ -67,12 +53,6 @@ original [Parzec] repository:
   - Added the GitHub Action [ci](.github/workflows/ci.yml) workflow which runs
     [dev.ts](dev.ts).
   - Added code coverage reporting.
-
-# Usage
-
-```ts
-import * as pz from "https://deno.land/x/parzec_deno/mod.ts";
-```
 
 [Parsec]: http://hackage.haskell.org/package/parsec
 [higher order functions]: https://en.wikipedia.org/wiki/Higher-order_function
