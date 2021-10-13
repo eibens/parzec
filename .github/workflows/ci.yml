@@ -6,6 +6,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: denoland/setup-deno@v1
-      - shell: "bash"
-        run: export CODECOV_TOKEN="${{ secrets.CODECOV_TOKEN }}"
-          deno run -A dev.ts --ci --debug
+      - run: export CODECOV_TOKEN="${{ secrets.CODECOV_TOKEN }}" && deno run -A dev.ts --ci --debug
