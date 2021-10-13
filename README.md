@@ -95,5 +95,5 @@ import * as pz from "https://deno.land/x/parzec_deno/mod.ts";
 [coverage]: https://codecov.io/gh/eibens/parzec
 [build]: https://github.com/eibens/parzec/actions/workflows/ci.yml
 [build-shield]: https://img.shields.io/github/workflow/status/eibens/parzec/ci?logo=github&label
-[deno-land]: https://deno.land/x/parzec
-[deno-land-shield]: https://img.shields.io/badge/x/parzec-informational?logo=deno&label
+[deno-land]: https://deno.land/x/parzec_deno
+[deno-land-shield]: https://img.shields.io/badge/x/parzec__deno-informational?logo=deno&label
