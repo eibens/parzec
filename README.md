@@ -2,7 +2,7 @@
 
 [parzec_deno] is a Deno port of the [Parzec][parzec] NPM package. This module
 was created because currently the module at
-[deno.land/x/parzec](https://deno.land/x/parzec)) does not seem to support Deno
+[deno.land/x/parzec](https://deno.land/x/parzec) does not seem to support Deno
 out of the box.
 
 > [Parzec] is a parser combinator library adapted from Haskell's famous
