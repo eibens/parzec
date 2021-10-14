@@ -57,13 +57,18 @@ export class Lexer<S> {
    * The constructor adds two flags to the regular expressions given as
    * arguments. The `y` flag makes the search sticky so that it scans the
    * input string from the position indicated by the `lastIndex` property.
-   * The `u` flag makes the search support unicode characters.
+   * The `u` flag makes the search support unicode characters. Existing
+   * flags are preserved.
    */
   constructor(...tokens: [RegExp, S][]) {
-    this.matchers = tokens.map((t) => ({
-      regex: new RegExp(t[0], "yu"),
-      token: t[1],
-    }));
+    this.matchers = tokens.map((t) => {
+      const flagSet = new Set(t[0].flags + "yu");
+      const flags = [...flagSet].join("");
+      return {
+        regex: new RegExp(t[0], flags),
+        token: t[1],
+      };
+    });
   }
   /**
    * We check matchers one-by-one in the order they were given to
